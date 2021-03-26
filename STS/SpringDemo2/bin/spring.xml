@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<bean id="triangle" class="tarun.first.Triangle" >
+		<property name="pointA" ref="point1">
+		</property>
+		 
+
+		<property name="pointB">
+			<bean class="tarun.first.Point">
+				<property name="x" value="-20"></property>
+				<property name="y" value="0"></property>
+			</bean>
+		</property>
+		
+		
+		<property name="pointC">	
+			<bean class="tarun.first.Point">
+				<property name="x" value="20"></property>
+				<property name="y" value="0"></property>
+			</bean>
+		</property>
+	</bean>
+	
+	
+	<bean id="point1" class="tarun.first.Point">
+		<property name="x" value="0"></property>
+		<property name="y" value="0"></property>
+	</bean>
+	
+	<alias name="triangle" alias="triangle-alias"/>
+		
+</beans>
